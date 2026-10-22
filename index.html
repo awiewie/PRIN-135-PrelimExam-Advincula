@@ -3,158 +3,130 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIN135 - Midterm Exam | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
-    <header id="home">
-        <h1>Raquelle</h1>
-        <nav>
-            <ol>
-                <li><a href="#about">About Me</a></li>
+    <!-- ---------- Navigation ---------- -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="#top" class="nav-brand">Portfolio</a>
+            <ul class="nav-links">
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#awards-and-achievements">Awards and Achievements</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ol>
-                
-        </nav>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ---------- Header ---------- -->
+    <header class="site-header">
+        <div class="header-inner clearfix">
+
+            <div class="photo-box">
+                <div class="photo-frame">
+                    <!-- Replace the image with your own profile picture -->
+                    <img class="photo" src="https://static.wikia.nocookie.net/barbie-movies/images/c/cc/Raquelle_Fashion_Fairytale.png/revision/latest/scale-to-width-down/268?cb=20210412180313" alt="Profile picture of Raquelle">
+                </div>
+            </div>
+
+            <div class="header-text">
+                <h1 class="name">Raquelle</h1>
+                <ul class="header-links">
+                    <li><a href="tel:+639123456789">+63 912 345 6789</a></li>
+                    <li><a href="mailto:raquelle@gmail.com">raquelle@gmail.com</a></li>
+                    <li><a href="https://github.com/awiewie" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+                <p class="profile">
+                    An IT professional who enjoys all things STEM and fashion.
+                    I like turning MY creative ideas into cute web pages and
+                    I'm always learning new tools and techniques.
+                </p>
+            </div>
+
+        </div>
     </header>
 
-    <main>
+    <main class="wrapper">
 
-        <section id="about">
-            <h2>About Me</h2>
-
-            <figure>
-                <img
-                    width="200"
-                    height="200"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl02SSI5fq77gmWnPyMoauNk5YSaw3qLAVsF8RewkMaA&s=10"
-                    alt="Profile photo of Raquelle from Barbie">
-                <figcaption>Raquelle</figcaption>
-            </figure>
-
-            <address>
-                <p>
-                    Email:
-                    <a href="mailto:raquelle@gmail.com">
-                        raquelle@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    Contact Number:
-                    <a href="tel:+639123456789">
-                        +63 912 345 6789
-                    </a>
-                </p>
-
-                <p>
-                    GitHub:
-                    <a
-                        href="https://github.com/awiewie"
-                        target="_blank">
-                        awiewie.github.com
-                    </a>
-                </p>
-            </address>
-
-            <p>Hi, I'm Raquelle!</p>
-        </section>
-
-
-        <section id="skills">
+        <!-- ---------- Skills ---------- -->
+        <section id="skills" class="card">
             <h2>Skills</h2>
-
-            <ul>
+            <ul class="skill-list">
                 <li>HTML</li>
                 <li>Canva</li>
             </ul>
         </section>
 
-
-        <section id="education">
+        <!-- ---------- Education ---------- -->
+        <section id="education" class="card">
             <h2>Education</h2>
 
-            <ol>
-                <li>
-                    BS in Computer Science from Barbie Princess Charm School
-                </li>
-                <li>
-                    PhD in Mathematics from Harvard University
-                </li>
-            </ol>
+            <div class="entry">
+                <span class="entry-year">2017 - 2022</span>
+                <h3>Phd in Mathematics</h3>
+                <p class="entry-school">Harvard University, Boston</p>
+            </div>
+
+            <div class="entry">
+                <span class="entry-year">2013 - 2017</span>
+                <h3>BS in Computer Science</h3>
+                <p class="entry-school">Barbie Princess Charm School</p>
+            </div>
         </section>
 
-
-        <section id="awards-and-achievements">
-            <h2>Awards and Achievements</h2>
-
-            <ul>
-                <li>Nobel Peace Prize</li>
-                <li>Academy Awards' Best Actress 2023</li>
-                <li>GitHub Project Collaborator 2026</li>
+        <!-- ---------- Achievements ---------- -->
+        <section id="achievements" class="card">
+            <h2>Achievements</h2>
+            <ul class="achievement-list">
+                <li>
+                    <strong>GitHub Project Collaborator</strong> - Web Systems and Technology, 2026
+                </li>
+                <li>
+                    <strong>Peace Price</strong> - Nobel, 2024
+                </li>
+                <li>
+                    <strong>Best Supporting Actress</strong> - Academy Awards, 2023
+                </li>
             </ul>
         </section>
 
-
-        <section id="contact">
+        <!-- ---------- Contact me ---------- -->
+        <section id="contact" class="card">
             <h2>Contact Me</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-row clearfix">
+                    <div class="field field-left">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
 
-            <form>
+                    <div class="field field-right">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
 
-                <fieldset>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
 
-                    <p>
-                        <label for="name">Name:</label><br>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            maxlength="25"
-                            required>
-                    </p>
-
-                    <p>
-                        <label for="email">Email:</label><br>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            maxlength="25"
-                            required>
-                    </p>
-
-                    <p>
-                        <label for="message">Message:</label><br>
-                        <textarea
-                            id="message"
-                            name="message"
-                            maxlength="255"
-                            required></textarea>
-                    </p>
-
-                    <button type="submit">Contact Me</button>
-
-                </fieldset>
-
+                <button type="submit">Send Message</button>
             </form>
         </section>
 
     </main>
+
+    <!-- ---------- Footer ---------- -->
+    <footer class="site-footer">
+        <p class="footer-name">Raquelle &middot; Portfolio</p>
+        <a href="#top" class="back-to-top">Back to top &uarr;</a>
+    </footer>
+
 </body>
 
-<footer>
-    <nav>
-        <ol>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#awards-and-achievements">Awards and Achievements</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ol>
-    </nav>
-</footer>
 </html>
